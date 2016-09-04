@@ -23,11 +23,6 @@ namespace Start
             return width * height;
         }
 
-        public override void draw(char symbol)
-        {
-            throw new NotImplementedException();
-        }
-
         public override void draw(char symbol, bool filled)
         {
             throw new NotImplementedException();

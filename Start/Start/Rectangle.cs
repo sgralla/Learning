@@ -19,38 +19,10 @@ namespace Start
             return width * height;
         }
 
-        public override void draw(char symbol)
-        {
-            for (int i = 0; i < height; i+=1)
-            {
-                for (int j = 0; j < width; j+=1)
-                {
-                    Console.Write(symbol);
-                }
-                Console.WriteLine();
-            }
-        }
-
         public override void draw(char symbol, bool filled)
         {
-            if (filled)
-            {
-                draw(symbol);
-            }
-            else
-            {
-                for (int i = 0; i < width; i += 1)
-                {
-                    for (int j = 0; j < height; j += 1)
-                    {
-                        if (i == 0 || i == width-1 || j == 0 || j == height-1)
-                        {
-                            Console.Write(symbol);
-                        }
-                    }
-                    Console.WriteLine();
-                }
-            }
+            var RecDraw = new draw(height, width, symbol, filled);
+            RecDraw.symboldraw();
         }
     }
 }

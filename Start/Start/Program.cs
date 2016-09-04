@@ -11,7 +11,7 @@ namespace Start
         static void Main(string[] args)
         {
             var rect = new Rectangle(5, 4);
-            rect.draw('#');
+            rect.draw('#',false);
 
             Console.WriteLine();
 
