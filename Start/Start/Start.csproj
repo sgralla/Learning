@@ -43,14 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="draw.cs" />
     <Compile Include="Parallelogram.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Quadrilateral.cs" />
     <Compile Include="Rectangle.cs" />
     <Compile Include="Shape.cs" />
+    <Compile Include="Sort.cs" />
     <Compile Include="Square.cs" />
-    <Compile Include="draw.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

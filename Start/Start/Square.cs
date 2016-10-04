@@ -4,9 +4,9 @@ namespace Start
 {
     class Square : Quadrilateral
     {
-        public double size { get; set; }
+        public int size { get; set; }
 
-        public Square(double size)
+        public Square(int size)
         {
             this.size = size;
             //this.height = size;
@@ -19,8 +19,8 @@ namespace Start
 
         public override void draw(char symbol, bool filled)
         {
-            var Dsquare = new draw(size, size, symbol, filled);
-            Dsquare.symboldraw();
+            var dsquare = new draw(size, size, symbol, filled);
+            dsquare.symboldraw();
         }
     }
 }

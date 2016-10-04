@@ -10,7 +10,7 @@ namespace Start
     {
         public int extent { get; set; }
 
-        public Parallelogram (double width, double height, int extent)
+        public Parallelogram (int width, int height, int extent)
         {
             this.width = width;
             this.height = height;

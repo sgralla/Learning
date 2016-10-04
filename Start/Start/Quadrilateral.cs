@@ -8,7 +8,7 @@ namespace Start
 {
     abstract class Quadrilateral : Shape
     {
-        public double width { get; set; }
-        public double height { get; set; }
+        public int width { get; set; }
+        public int height { get; set; }
     }
 }
