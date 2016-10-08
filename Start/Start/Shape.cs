@@ -8,8 +8,8 @@ namespace Start
 {
     public abstract class Shape
     {
-        public abstract double getArea();
+        public abstract int GetArea();
         //public abstract void draw(char symbol);
-        public abstract void draw(char symbol, bool filled);
+        public abstract void Draw(char symbol, bool filled);
     }
 }

@@ -7,42 +7,103 @@ using System.Threading.Tasks;
 
 namespace Start
 {
-    internal class Rectangle : Quadrilateral
+    public class Rectangle : Quadrilateral
     {
         public Rectangle (int width, int height)
         {
-            this.width = width;
-            this.height = height;
+            Width = width;
+            Height = height;
+            X = 0;
+            Y = 0;
         }
 
-        public override double getArea()
+        public Rectangle(int width, int height, int x, int y)
         {
-            return width * height;
+            Width = width;
+            Height = height;
+            X = x;
+            Y = y;
         }
 
-        public override void draw(char symbol, bool filled)
+        public override int GetArea()
         {
-            var recDraw = new draw(height, width, symbol, filled);
-            recDraw.symboldraw();
+            return Width * Height;
         }
+
+        public override void Draw(char symbol, bool filled)
+        {
+            for (var i = 0; i < Height + Y; i += 1)
+            {
+                if (X != 0)
+                {
+                    Console.Write(MoveString());
+                }
+
+                for (var j = 0; j < Width; j += 1)
+                    if (i >= Y)
+                    {
+                        if (filled || (i == Y) || (i == Height + Y -1)
+                            || (j == 0) || (j == Width - 1))
+                            Console.Write(symbol);
+                        else
+                            Console.Write(" ");
+                    }
+                Console.WriteLine();
+            }
+
+        }
+
+        public void Draw()
+        {
+            Draw('+',false);
+        }
+
+        private string MoveString()
+        {
+            var mString = "";
+            for (var m = 0; m < X; m += 1)
+            {
+                mString += " ";
+            }
+            return mString;
+        }
+
 
         public void Rotate()
         {
-            var temp = width;
-            width = height;
-            height = temp;
+            var temp = Width;
+            Width = Height;
+            Height = temp;
         }
 
-        public void Hoch2()
+        public void Square()
         {
-            width = width * width;
-            height = height * height;
+            Width = Width * Width;
+            Height = Height * Height;
+        }
+
+        public void Root()
+        {
+            Width = (int)Math.Sqrt(Width);
+            Height = (int)Math.Sqrt(Height);
         }
 
         public void Inner()
         {
-            width = width - 2;
-            height = height - 2;
+            Width = Width - 2;
+            Height = Height - 2;
+        }
+
+        public void Move(int x, int y)
+        {
+            X += x;
+            Y += y;
+        }
+
+        public void ResetPosition()
+        {
+            X = 0;
+            Y = 0;
         }
     }
 }

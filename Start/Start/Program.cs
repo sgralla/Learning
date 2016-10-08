@@ -1,19 +1,10 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Concurrent;
-using System.Collections.ObjectModel;
-using System.Diagnostics;
-using System.Globalization;
-using System.IO;
-using System.Linq;
-using System.Net;
-using System.Security.Cryptography.X509Certificates;
 
 namespace Start
 {
-    internal class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
 //            var rect = new Rectangle(5, 4);
 //            rect.draw('#',false);
@@ -179,41 +170,90 @@ namespace Start
 //                Console.WriteLine(data[i,0]);
 //            }
 
+            //Console.BackgroundColor = ConsoleColor.Blue;
 
-            var rect = new Rectangle(4,7);
-            rect.draw('@',false);
+//            var rect = new Rectangle(4,7);
+//            rect.Draw('@',false);
+//
+//            rect.Rotate();
+//
+//            rect.Draw('@',false);
+//
+//            rect.Inner();
+//
+//            rect.Draw('#', false);
+//
+//            rect.Square();
+//
+//            rect.Draw('*', false);
+//
+//
+//            for (var i = 0; i < 8; i += 1)
+//            {
+//                for (var j = 0; j < 8; j += 1)
+//                {
+//                    Console.Write((i + j) % 2 == 0 ? "[+]" : "   ");
+//                }
+//                Console.WriteLine();
+//            }
+//
+//            var tri = new Triangle(5);
+//            tri.Draw('+',false);
+//
+//            Console.WriteLine();
+//            Console.WriteLine();
+//
+//            tri.Draw('௵', true, Operator.Down);
+//
+//
+//            tri.Drawfourbyfour('M',false);
 
-            rect.Rotate();
+//            var cir = new Circle(3);
+//            cir.Draw('+', false);
+//
+//            var rho = new Diamond(27);
+//            rho.Draw('+', false);
+//
+//            var rho2 = new Diamond(14);
+//            rho2.Draw('+',false);
+//
+//            Console.ReadKey();
 
-            rect.draw('@',false);
+//            Console.Clear();
+//            Console.WriteLine();
+//
+            var sq = new Square(3);
+            sq.Draw('#', true);
+            Console.WriteLine();
+            sq.Square();
+            sq.Draw('@', true);
+            Console.WriteLine();
+            sq.Inner();
+            sq.Draw('*', false);
+            Console.WriteLine();
+            sq.Move(3, 5);
+            sq.Draw('o', false);
+            Console.WriteLine();
 
-            rect.Inner();
+            var rec = new Rectangle(3,4,5,6);
+            rec.Draw('#', true);
 
-            rect.draw('#', false);
+            var squ = new Square(5,4,3);
+            squ.Draw();
 
-            rect.Hoch2();
+            squ.Root();
 
-            rect.draw('*', false);
+            squ.Draw();
 
-
-            for (var i = 0; i < 8; i += 1)
-            {
-                for (var j = 0; j < 8; j += 1)
-                {
-                    if ((i+j)%2 == 0)
-                        Console.Write("[+]");
-                    else
-                    {
-                        Console.Write("  ");
-                    }
-                }
-                Console.WriteLine();
-            }
-
-            Console.ReadKey();
+            squ.Square();
+            squ.ResetPosition();
+            squ.Draw();
 
 
 
+        }
+
+        public enum Operator { Top = 0, Down = 1, Left = 2, Right = 3
         }
 
     }

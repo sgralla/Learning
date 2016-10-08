@@ -2,25 +2,16 @@
 
 namespace Start
 {
-    class Square : Quadrilateral
+    internal class Square : Rectangle
     {
-        public int size { get; set; }
+        public int Size { get; set; }
 
-        public Square(int size)
+        public Square(int size) : base(size, size)
         {
-            this.size = size;
-            //this.height = size;
         }
 
-        public override double getArea()
+        public Square(int size, int x, int y) : base(size, size, x, y)
         {
-            return size * size;
-        }
-
-        public override void draw(char symbol, bool filled)
-        {
-            var dsquare = new draw(size, size, symbol, filled);
-            dsquare.symboldraw();
         }
     }
 }

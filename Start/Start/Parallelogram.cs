@@ -12,18 +12,18 @@ namespace Start
 
         public Parallelogram (int width, int height, int extent)
         {
-            this.width = width;
-            this.height = height;
+            this.Width = width;
+            this.Height = height;
             this.extent = extent;
 
         }
 
-        public override double getArea()
+        public override int GetArea()
         {
-            return width * height;
+            return Width * Height;
         }
 
-        public override void draw(char symbol, bool filled)
+        public override void Draw(char symbol, bool filled)
         {
             throw new NotImplementedException();
         }
