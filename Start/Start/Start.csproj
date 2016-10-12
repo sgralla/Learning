@@ -44,8 +44,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Circle.cs" />
+    <Compile Include="Cross.cs" />
+    <Compile Include="CWriter.cs" />
     <Compile Include="Diamond.cs" />
     <Compile Include="draw.cs" />
+    <Compile Include="Generics.cs" />
     <Compile Include="Parallelogram.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -55,6 +58,7 @@
     <Compile Include="Shape.cs" />
     <Compile Include="Sort.cs" />
     <Compile Include="Square.cs" />
+    <Compile Include="StringExtensions.cs" />
     <Compile Include="Sword.cs" />
     <Compile Include="Triangle.cs" />
   </ItemGroup>

@@ -1,4 +1,6 @@
-﻿using System;
+﻿//using System;
+
+using System;
 
 namespace Start
 {
@@ -222,32 +224,84 @@ namespace Start
 //            Console.Clear();
 //            Console.WriteLine();
 //
-            var sq = new Square(3);
-            sq.Draw('#', true);
-            Console.WriteLine();
-            sq.Square();
-            sq.Draw('@', true);
-            Console.WriteLine();
-            sq.Inner();
-            sq.Draw('*', false);
-            Console.WriteLine();
-            sq.Move(3, 5);
-            sq.Draw('o', false);
-            Console.WriteLine();
+//            var sq = new Square(3);
+//            sq.Draw('#', true);
+//            Console.WriteLine();
+//            sq.Square();
+//            sq.Draw('@', true);
+//            Console.WriteLine();
+//            sq.Inner();
+//            sq.Draw('*', false);
+//            Console.WriteLine();
+//            sq.Move(3, 5);
+//            sq.Draw('o', false);
+//            Console.WriteLine();
+//
+//            var rec = new Rectangle(3,4,5,6);
+//            rec.Draw('#', true);
+//
+//            var squ = new Square(5,4,3);
+//            squ.Square();
+//            squ.ResetPosition();
+//            squ.Draw();
+//
+//            squ.Move(-1,-1);
+//            squ.Draw();
+//            squ.Root();
+//            squ.Move(-1,-1);
+//            squ.Draw();
+//
+//            squ.ResetPosition();
 
-            var rec = new Rectangle(3,4,5,6);
-            rec.Draw('#', true);
+//            var squ = new Square(5);
+//            squ.Draw();
+//            Rhombus rho;
+////            squ.Tilt(ref squ, out rho);
+////            rho.Draw();
+//            Square.ToRhombus(squ, out rho, true);
+//
+//            rho.Draw();
+//
+//            Rhombus.ToSquare(rho, out squ, true);
+//            squ.Draw();
+//
+//            var dia = new Diamond(7);
+//            dia.Draw();
+//            Square sq;
+//            Rhombus.ToSquare(dia, out sq);
+//            sq.Draw();
 
-            var squ = new Square(5,4,3);
-            squ.Draw();
 
-            squ.Root();
 
-            squ.Draw();
+//            var cro = new Cross(3,3,15,3,3);
+//            cro.Draw('+');
+//            Console.WriteLine();
+//            cro.Tilt(true);
+//
+//            Console.WriteLine();
+//            cro.Tilt(true, 'ä');
 
-            squ.Square();
-            squ.ResetPosition();
-            squ.Draw();
+//            CWriter.A();
+//            CWriter.B();
+//
+//            CWriter.CWriteLine("ABC");
+
+//            var gList = new GenericList<Shape>();
+//            gList.Add(new Circle(3));
+//            gList.Add(new Diamond(4));
+//            Console.WriteLine(gList.Index(1));
+//            var post = "This is a rather long post which needs to be shortened.";
+//            var shortenedpost = post.Shorten(5);
+//            Console.WriteLine(shortenedpost);
+//
+//            DateTime? Date2;
+//            if (Console.ReadKey().Equals(value: 'a'))
+//                Date2 = new DateTime(2015, 09, 08);
+//            else
+//                Date2 = null;
+//            var date3 = Date2 != null ? Date2.GetValueOrDefault() : DateTime.Today;
+//            Console.WriteLine(date3);
+
 
 
 

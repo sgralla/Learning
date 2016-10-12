@@ -1,20 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Start
 {
     public class Rectangle : Quadrilateral
     {
-        public Rectangle (int width, int height)
+        public Rectangle (int width, int height) : this(width, height, 0, 0)
         {
-            Width = width;
-            Height = height;
-            X = 0;
-            Y = 0;
         }
 
         public Rectangle(int width, int height, int x, int y)
@@ -25,29 +16,36 @@ namespace Start
             Y = y;
         }
 
-        public override int GetArea()
+        public override double GetArea()
         {
             return Width * Height;
         }
 
-        public override void Draw(char symbol, bool filled)
+        public override void Draw(char symbol)
+        {
+            Draw(symbol, false);
+        }
+
+        public void Draw(char symbol, bool filled)
         {
             for (var i = 0; i < Height + Y; i += 1)
             {
-                if (X != 0)
+                if (i >= Y)
                 {
-                    Console.Write(MoveString());
-                }
-
-                for (var j = 0; j < Width; j += 1)
-                    if (i >= Y)
+                    for (var j = 0; j < Width + X; j += 1)
                     {
-                        if (filled || (i == Y) || (i == Height + Y -1)
-                            || (j == 0) || (j == Width - 1))
+                        while (j < X)
+                        {
+                            Console.Write(" ");
+                            j += 1;
+                        }
+                        if (filled || (i == Y) || (i == Height + Y - 1)
+                            || (j == X) || (j == Width + X - 1))
                             Console.Write(symbol);
                         else
                             Console.Write(" ");
                     }
+                }
                 Console.WriteLine();
             }
 
@@ -57,17 +55,6 @@ namespace Start
         {
             Draw('+',false);
         }
-
-        private string MoveString()
-        {
-            var mString = "";
-            for (var m = 0; m < X; m += 1)
-            {
-                mString += " ";
-            }
-            return mString;
-        }
-
 
         public void Rotate()
         {

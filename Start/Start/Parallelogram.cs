@@ -18,12 +18,12 @@ namespace Start
 
         }
 
-        public override int GetArea()
+        public override double GetArea()
         {
             return Width * Height;
         }
 
-        public override void Draw(char symbol, bool filled)
+        public override void Draw(char symbol)
         {
             throw new NotImplementedException();
         }
